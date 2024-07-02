@@ -1,0 +1,388 @@
+body {
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", "MS P明朝", serif;
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #db7093;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+#hero-carousel {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9のアスペクト比 */
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav {
+    background-color: rgba(219, 112, 147, 1);
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.large-text {
+    font-size: 1.5em;
+}
+
+.highlight-bg {
+    background-color: #ffc0cb;
+    padding: 0.5rem;
+    display: inline-block;
+}
+
+.highlight-text {
+    color: #db7093;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature img {
+    width: 40%;
+    height: auto;
+    max-width: 300px;
+}
+
+.feature-text {
+    width: 60%;
+    padding: 0 2rem;
+}
+
+.ingredients-intro {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.1em;
+}
+
+.ingredients-list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+}
+
+.ingredient {
+    flex-basis: 30%;
+    padding: 1rem;
+    background-color: #fff9fb;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(219, 112, 147, 0.1);
+}
+
+.ingredient h3 {
+    color: #db7093;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .ingredients-list {
+        flex-direction: column;
+    }
+
+    .ingredient {
+        margin-bottom: 1rem;
+    }
+}
+
+.ingredients-image {
+    max-width: 600px; /* 最大幅を600pxに制限 */
+    width: 80%; /* 親要素の80%の幅に設定 */
+    margin: 2rem auto; /* 上下のマージンを2rem、左右をautoで中央揃え */
+}
+
+.ingredients-image img {
+    width: 100%; /* 親要素の幅いっぱいに広げる */
+    height: auto; /* アスペクト比を維持 */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 軽いシャドウ効果 */
+    display: block; /* インライン要素をブロック要素に変更 */
+}
+
+@media (max-width: 768px) {
+    .ingredients-image {
+        width: 90%; /* モバイルでは少し広げる */
+    }
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review-card {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+#purchase-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #db7093;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#purchase-button a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.slick-dots {
+    bottom: 20px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #db7093;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #db7093;
+}
+
+@media (max-width: 768px) {
+    #hero-carousel {
+        padding-top: 75%; /* モバイルでは4:3のアスペクト比に変更可能 */
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin-bottom: 0.5rem;
+    }
+
+    .feature, .feature.reverse {
+        flex-direction: column;
+    }
+
+    .feature img, .feature-text {
+        width: 100%;
+    }
+
+    .feature-text {
+        padding: 1rem 0;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #purchase-button {
+        width: 120px;
+        height: 120px;
+    }
+
+    #purchase-button a {
+        font-size: 1.2rem;
+    }
+}
+
+.product-gallery {
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.product-gallery .slick-slide {
+    margin: 0 10px;  /* 画像間の隙間を追加 */
+}
+
+.product-gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Slick Carousel用のカスタムスタイル */
+.slick-prev, .slick-next {
+    z-index: 1;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #db7093;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #db7093;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #db7093;
+}
+
+.btn-online-shop {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: #db7093;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-online-shop:hover {
+    background-color: #c76083;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.company-info h3 {
+    color: #db7093;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: #db7093;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #c76083;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+    }
+}
