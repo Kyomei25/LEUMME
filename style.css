@@ -38,6 +38,17 @@ header {
     object-fit: cover;
 }
 
+/* スマートフォン向けのスタイル */
+@media screen and (max-width: 767px) {
+    #hero-carousel {
+        padding-top: 75%; /* スマートフォンでは4:3のアスペクト比に変更 */
+    }
+
+    .carousel img {
+        object-position: center; /* 画像の中央を表示 */
+    }
+}
+
 nav {
     background-color: rgba(219, 112, 147, 1);
     padding: 1rem 0;
