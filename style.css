@@ -42,6 +42,12 @@ header {
 @media screen and (max-width: 767px) {
     #hero-carousel {
         padding-top: 75%; /* スマートフォンでは4:3のアスペクト比に変更 */
+        margin-top: 60px; /* ヘッダーの高さに応じて調整 */
+    }
+
+    .carousel {
+        top: 60px; /* ヘッダーの高さに応じて調整 */
+        height: calc(100% - 60px); /* ヘッダーの高さを引いた分を設定 */
     }
 
     .carousel img {
